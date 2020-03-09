@@ -32,15 +32,21 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const AppWrapper = styled.div`
+  overflow: hidden;
+`;
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
       <Nav />
+    <AppWrapper>
+
       <Route exact path="/" render={() => <Landing delayTime="0.5" />} />
 
-      <Route exact path="/temp" render={() => <CatList delayTime="1005" />} />
+      <Route exact path="/temp" render={() => <CatList delayTime="1000" />} />
+    </AppWrapper>
     </>
   );
 };

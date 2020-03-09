@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import DelayTransition from "./DelayTransition";
 
 const AppWrapper = styled.div`
-
-overflow: hidden;
-
-`;
-
-const Hee = styled.div`
-  margin: 0 auto;
-  
-  padding-top: 35vh;
-  text-align: center;
-
-  @keyframes moveUp {
+@keyframes moveUp {
     from {
       transform: translateY(0);    }
     to {
@@ -31,7 +20,17 @@ const Hee = styled.div`
       margin-left: 1000px;
     }
   } */
-  ${({delayTime, isLeaving}) => isLeaving === true ? (`animation: moveUp ${delayTime}s linear;`) : null}
+  ${({delayTime, isLeaving}) => isLeaving === true ? (`animation: moveUp ${delayTime}s linear;`) : ""}
+  
+
+`;
+
+const Hee = styled.div`
+  margin: 0 auto;
+  
+  padding-top: 35vh;
+  text-align: center;
+
   
 
 `;
@@ -63,13 +62,15 @@ const Underline = styled.span`
 `;
 
 const Landing = props => {
+
+
   const { delayTime, redirectWithDelay } = props;
   const [leaving, useLeaving] = useState(false);
 
   
   return (
-    <AppWrapper>
-      <Hee delayTime={delayTime} isLeaving={leaving}>
+    <AppWrapper delayTime={delayTime} isLeaving={leaving}>
+      <Hee>
         <Text>
           Find your <Underline>perfect</Underline> breed of cat from all of the{" "}
           <Underline>wonderful</Underline> breeds!

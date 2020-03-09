@@ -1,10 +1,17 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
 import DelayTransition from "./DelayTransition";
+
 const SuperHugeTempThing = styled.div`
   font-size: 400px;
 
-  @keyframes moveUp {
+  
+
+`;
+
+const DivWrapper = styled.div`
+
+@keyframes moveLeft {
     from {
       transform: translateX(100vw);    }
     to {
@@ -12,12 +19,7 @@ const SuperHugeTempThing = styled.div`
     }
   }
 
-  animation: moveUp 1s linear;
-
-`;
-
-const SomeDiv = styled.div`
-overflow: hidden;
+  animation: moveLeft 1s linear;
 `;
 
 const CatList = (props) => {
@@ -26,13 +28,13 @@ const CatList = (props) => {
   // const [leaving, useLeaving] = useState(false);
 
   return (
-    <>
+    <DivWrapper>
       {/* <SuperHugeTempThing onClick={() => {
               useLeaving(true)
               redirectWithDelay(delayTime, "/")
             }}>TEMP</SuperHugeTempThing> */}
                   <SuperHugeTempThing>TEMP</SuperHugeTempThing>
-    </>
+    </DivWrapper>
   )
 }
 

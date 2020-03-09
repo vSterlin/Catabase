@@ -2,14 +2,16 @@ import React from "react";
 import { Paw } from "styled-icons/fa-solid";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
 
 const iconFlex = 7;
 
-const PawIconWrapper = styled.div`
+const PawIconWrapperLink = styled(Link)`
 display: flex;
 align-items: center;
 flex: ${iconFlex};
-
+color: black;
+text-decoration: none;
 `;
 
 
@@ -53,11 +55,11 @@ const Nav = () => {
   return (
     <header>
       <Navigation>
-        <PawIconWrapper>
+        <PawIconWrapperLink to="/">
 
         <PawIcon />
           <Name>Catabase</Name>
-        </PawIconWrapper>
+        </PawIconWrapperLink>
         <NavList>
           <ListItem>Home</ListItem>
           <ListItem>About</ListItem>
