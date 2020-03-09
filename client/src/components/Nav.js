@@ -3,7 +3,7 @@ import { Paw } from "styled-icons/fa-solid";
 import styled from "styled-components";
 
 
-const iconFlex = 5;
+const iconFlex = 7;
 
 const PawIconWrapper = styled.div`
 display: flex;
