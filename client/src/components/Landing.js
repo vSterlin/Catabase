@@ -82,8 +82,9 @@ const Landing = props => {
           <Button
             color={buttonColor}
             onClick={() => {
-              useLeaving(true)
-              redirectWithDelay(delayTime*1000, "/temp")
+              useLeaving(true);
+              localStorage.setItem("hasVisited", true);
+              redirectWithDelay(delayTime*1000, "/");
             }}
           >
             Success

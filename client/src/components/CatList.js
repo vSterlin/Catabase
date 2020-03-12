@@ -26,9 +26,10 @@ const CatList = (props) => {
 
   // const { delayTime, redirectWithDelay } = props;
   // const [leaving, useLeaving] = useState(false);
-
+  
   return (
     <DivWrapper>
+      {console.log(localStorage)}
       {/* <SuperHugeTempThing onClick={() => {
               useLeaving(true)
               redirectWithDelay(delayTime, "/")
