@@ -41,13 +41,13 @@ const hasVisited = () => localStorage.getItem("hasVisited");
 const App = () => {
   return (
     <>
-    {hasVisited() ? null : history.push("/welcome")}
+    {/* {hasVisited() ? null : history.push("/welcome")} */}
       <GlobalStyle />
       <Nav />
     <AppWrapper>
     
-      <Route exact path="/welcome" render={() => <Landing delayTime="0.5" />} />
-
+      {/* <Route exact path="/welcome" render={() => <Landing delayTime="0.5" />} /> */}
+{/* will change in future */}
       <Route exact path="/" render={() => <CatList delayTime="1000" />} />
     </AppWrapper>
     </>
